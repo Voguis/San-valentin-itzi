@@ -1,0 +1,59 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín, Itzi?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #808080;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentín, Itzi? ❤️</h1>
+    <button class="yes" onclick="respuestaSi()">Sí</button>
+    <button class="no" onclick="respuestaNo()">No</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+        function respuestaSi() {
+            document.getElementById("mensaje").innerHTML = "¡Sabía que dirías que sí! ❤️😍";
+        }
+
+        function respuestaNo() {
+            const respuestas = [
+                "¡No te preocupes, igual eres increíble! 😊",
+                "Oh... está bien, seguiré intentando 😅",
+                "Está bien, lo importante es que seas feliz 😊",
+                "¡Respeto tu decisión! Pero que sepas que me esforcé 💪😆"
+            ];
+            let randomRespuesta = respuestas[Math.floor(Math.random() * respuestas.length)];
+            document.getElementById("mensaje").innerHTML = randomRespuesta;
+        }
+    </script>
+</body>
+</html>
